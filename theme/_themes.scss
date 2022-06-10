@@ -1,0 +1,133 @@
+//定义全局主题&颜色的map数组
+//切记 所有颜色一式两份儿，务必保证key值统一，key值可以自定义，注意避免$%_之类的，
+//与sass自有符号冲突，见文知意即可
+//另外如果基于其他UI框架，如本项目基于element-ui，则只需设置一套dark主题，
+//data-theme为dark时，样式引用dark
+//data-theme为其他值时，自然就采用了elementui的默认样式
+// $themes: (
+//   light: (
+//     font_color1: #000000, //弹窗提示内容
+//     font_color2: #00deff, //创想蓝
+//     font_color3: #828282, //新增设备输入提示,弹窗取消按钮
+//     font_color4: #ffffff, //新增设备label标签
+//     font_color5: #7b818d, //文件搜索提示语
+//     font_color6: #9ea5b5, //文件大小及日期描述
+//     font_color7: #aaaaaa, //底部Tab栏
+//     background_color1: #ffffff, //弹窗背景色，
+//     background_color2: #232428, //设备列表背景色
+//     background_color3: #5f6169, //设备列表选中背景
+//     background_color4:  #e1e1e1, //添加材料input框背景
+//     background_color5: #a7acb5, //预热材料选中背景色
+//     background_color6:  #cecece, //预热材料修改按钮背景提示
+//     background_color7: #6A6F78, //确认打印参数选中状态
+//     background_color8: #383B41, //文件搜索背景
+//     background_color9: #4E535C, //U盘Tab背景
+//     background_color10: #00B8D3, //U盘Tab未选中背景
+//     border_color1: #EBC200, //登录聚焦状态
+//     border_color2: #606060, //登录注册失焦状态
+//     border_color3: #EAEAEA, //弹窗头部下边框
+//     border_color4: #7e838f, //修改切片参数
+//     border_color5: #000000, //修改设备边框
+//   ),
+//   dark: (
+//     font_color1: #00DFFF, //创想蓝
+//     font_color2: #ffffff, //弹窗提示内容
+//     font_color3: #ED1C24, //提示文字颜色
+//     font_color4: #9A9FAB, //确认答应参数Label
+//     font_color5: #7F8490, //创想云文件保存和取消按钮
+//     font_color6: #8D96A7, //横屏打印中剩余打印时间label
+//     font_color7: #9BA0AD, //本机信息label
+//     background_color1: #555B66, //弹窗背景色
+//     background_color2: #30343c, //弹窗按钮背景色
+//     background_color3: #101216, //横屏背景色
+//     background_color4:  #000000, //dark背景色
+//     background_color5:  #02C6E3, //按钮主题背景
+//     background_color6:  #33373E, //搜索框背景
+//     background_color7: #33373E, //云切片打印按钮背景
+//     background_color8: #24272D, //个人资料背景
+//     background_color9: #7F8490, //调平页面按钮背景色
+//     background_color10: #737B8A, //延时摄影下拉背景
+//     border_color1: #00DFFF, //输入框聚焦
+//     border_color2: #7F8490, //登录注册失焦状态
+//     border_color3: #30343C, //弹窗头部下边框
+//     border_color4: #33373E, //打印中剩余时间边框
+//     border_color5: #101216, //预热页面下边框
+//   ),
+// )
+
+$themes: (
+  light: (
+    font_color1: #000000,
+    font_color2: #00DEFF,
+    font_color3: #7B8292,
+    font_color4: #00DFFF,
+    font_color5: #828282, //移动弹窗取消按钮色
+    font_color6: #000000,
+    font_color7: #000000, // toast提示字体色
+    font_color8: #FFFFFF, //loading字体颜色
+    font_color9: #000000, //亮色调主题字体颜色
+    font_color10: #9A9FAB, //input字体颜色
+    font_color11: #FFFFFF, //input placeholder颜色
+    background_color1:#EAEAEA,
+    background_color2:#373B41,
+    background_color3: #00B8D3,
+    background_color4:#FFFFFF,
+    background_color5: #292B31,
+    background_color6: #30343C,
+    background_color7: #33373E,
+    background_color8: #FFFFFF, // 弹窗背景色
+    background_color9: #FFFFFF, //弹窗按钮背景色
+    background_color10: #DADADA, //移动端按钮点击背景
+    background_color11: #FFFFFF, //移动端弹窗背景色
+    background_color12: #FFFFFF, //toast内容背景色
+    background_color13: #3f434a, //loading内容背景
+    background_color14: #373B41, //亮色调主题背景
+    background_color15: #02C6E3, //switch高亮色
+    background_color16: #33373E, //input背景色
+    background_color17: #02C6E3, //swiper指示器背景
+    background_color18: #6B717C, //swiper容器背景
+    border_color1: #eaeaea, //移动端弹窗分割线
+    border_color2: #eaeaea,
+    border_color3: #eaeaea,
+    border_color4: #FFFFFF, //input边框色
+    border_color5: #FFFFFF, //input边框色
+    border_color6: #565B66, // swiper默认边框
+  ),
+  dark: (
+    font_color1: #FFFFFF,
+    font_color2: #00DEFF,
+    font_color3: #7B8292,
+    font_color4: #00DFFF,
+    font_color5: #828282, //移动弹窗取消按钮色
+    font_color6: #000000,
+    font_color7: #00DFFF, // toast提示字体色
+    font_color8: #FFFFFF, //loading字体颜色
+    font_color9: #FFFFFF, //暗色调主题字体颜色 input字体色
+    font_color10: #FFFFFF, //input 字体颜色
+    font_color11: #7b8292, //input placeholder颜色
+    background_color1:#565B66, //toast背景色
+    background_color2:rgba(0,0,0,.85),
+    background_color3: #00B8D3,
+    background_color4:#02C6E3,
+    background_color5: #373B41,
+    background_color6: #30343C,
+    background_color7: #33373E,
+    background_color8: #555B66, // 弹窗背景色
+    background_color9: #30343C, //弹窗按钮背景色
+    background_color10: #DADADA, //移动端按钮点击背景
+    background_color11: #FFFFFF, //移动端弹窗背景色
+    background_color12:rgba(0,0,0,.85), //toast内容背景色
+    background_color13: #3f434a, //loading内容背景
+    background_color14: #000000, //暗色调主题背景
+    background_color15: #02C6E3, //switch高亮色
+    background_color16: #292B31, //input背景色
+    background_color17: #02C6E3, //swiper指示器的颜色
+    background_color18: #6B717C, //swiper容器背景
+    border_color1: #eaeaea, //移动端弹窗分割线
+    border_color2: #555B66,
+    border_color3: #30343C,
+    border_color4: #42474F, //input边框色
+    border_color5: #00DEFF, //input边框色
+    border_color6: #565B66, // swiper默认边框
+  ),
+)
